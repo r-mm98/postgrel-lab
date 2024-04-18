@@ -1,0 +1,6 @@
+SELECT 
+usename,
+CASE WHEN usecreatedb = 't' THEN 'YES' ELSE 'NO' END AS CANCREATEDB,
+CASE WHEN usesuper = 't' THEN 'YES' ELSE 'NO' END AS ISSUPErUSER,
+CASE WHEN userepl = 't' THEN 'YES' ELSE 'NO' END AS CANREPLICATION
+FROM pg_user
